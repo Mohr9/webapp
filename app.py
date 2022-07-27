@@ -71,8 +71,8 @@ data = pd.read_csv("diabete_population.csv")
 print(data)
   
  ### Recuperation des features :
-age = st.slider("Select your age", data['age'].min(), data["age"].max()) 
-grossesses = st.slider("Select your grossesses", data['grossesses'].min(), data["grossesses"].max()) 
+age = st.slider("Select your age", 0, 100) 
+grossesses = st.slider("Select your grossesses", 0, 10) 
 insuline= st.number_input("Enter your insuline") 
 
 # ##### Normalisation des features################################
