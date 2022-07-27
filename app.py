@@ -100,9 +100,9 @@ if(st.button('Predict Diabete')):
         print(query)
         prediction = rf.predict(query)[0]
         if prediction == 0:
-            st.title("Valeur prédite : " + str(prediction) + " Vous êtes non diabétique ! modèle utilisé :" + str(nom_fichier[0]))
+            st.title("Valeur prédite : " + str(prediction) + " Vous êtes probablement non diabétique ! modèle utilisé :" + str(nom_fichier[0]))
         else:
-            st.title("Valeur prédite : " + str(prediction) + " Vous êtes  diabétique !  modèle utilisé :" + str(nom_fichier[0]))
+            st.title("Valeur prédite : " + str(prediction) + " Vous êtes probablement diabétique !  modèle utilisé :" + str(nom_fichier[0]))
 
     elif(selected == nom_fichier[1]):
         query = np.array([grossesses, age, insuline])
@@ -111,9 +111,9 @@ if(st.button('Predict Diabete')):
         print(query)
         prediction = LR.predict(query)[0]
         if prediction == 0:
-            st.title("Valeur prédite : " + str(prediction) + " Vous êtes non diabétique ! modèle utilisé : " + str(nom_fichier[1]))
+            st.title("Valeur prédite : " + str(prediction) + " Vous êtes probablement non diabétique ! modèle utilisé : " + str(nom_fichier[1]))
         else:
-            st.title("Valeur prédite : " + str(prediction) + " Vous êtes  diabétique !  modèle utilisé :" + str(nom_fichier[1]))
+            st.title("Valeur prédite : " + str(prediction) + " Vous êtes probablement diabétique !  modèle utilisé :" + str(nom_fichier[1]))
         
     elif(selected == nom_fichier[2]):
         query = np.array([grossesses, age, insuline])
@@ -122,6 +122,6 @@ if(st.button('Predict Diabete')):
         print(query)
         prediction = forest.predict(query)[0]
         if prediction == 0:
-            st.title("Valeur prédite : " + str(prediction) + " Vous êtes non diabétique ! modèle utilisé :" + str(nom_fichier[2]))
+            st.title("Valeur prédite : " + str(prediction) + " Vous êtes probablement non diabétique ! modèle utilisé :" + str(nom_fichier[2]))
         else:
-            st.title("Valeur prédite : " + str(prediction) + " Vous êtes  diabétique !  modèle utilisé :" + str(nom_fichier[2]))
+            st.title("Valeur prédite : " + str(prediction) + " Vous êtes probablement diabétique !  modèle utilisé :" + str(nom_fichier[2]))
